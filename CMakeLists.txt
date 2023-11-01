@@ -23,8 +23,8 @@ find_package(std_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   msg/FFMPEGPacket.msg
-  DEPENDENCIES builtin_interfaces std_msgs
-  ADD_LINTER_TESTS)
+  DEPENDENCIES builtin_interfaces std_msgs)
+
 
 
 if(BUILD_TESTING)
