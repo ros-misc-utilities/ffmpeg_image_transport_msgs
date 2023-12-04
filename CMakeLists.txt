@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.8)
 project(ffmpeg_image_transport_msgs)
 
 find_package(ament_cmake REQUIRED)
@@ -23,19 +23,13 @@ find_package(std_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   msg/FFMPEGPacket.msg
-  DEPENDENCIES builtin_interfaces std_msgs)
+  DEPENDENCIES std_msgs)
 
 
 
 if(BUILD_TESTING)
-  find_package(ament_cmake REQUIRED)
-  find_package(ament_cmake_copyright REQUIRED)
-  find_package(ament_cmake_lint_cmake REQUIRED)
-  find_package(ament_cmake_xmllint REQUIRED)
-
-  ament_copyright()
-  ament_lint_cmake()
-  ament_xmllint()
+  find_package(ament_lint_auto REQUIRED)
+  ament_lint_auto_find_test_dependencies()
 endif()
 
 
