@@ -13,6 +13,6 @@ on:
 
 jobs:
    build_ros2:
-      uses: ros-event-camera/ros-build-action/.github/workflows/ros2_ci.yml@master
+      uses: ros-misc-utilities/action-ros-ci/.github/workflows/ros2_ci.yml@master
       with:
          repo: ${{ github.event.repository.name }}
